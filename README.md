@@ -79,7 +79,7 @@ The project use docker, so just run:
 
 > If it's first time, the images will be created. Sometimes the project doesn't run at first time because the init of mysql, just run again `docker-compose up` and it will work.
 
-*Your app will run in the port 8000: `localhost:8000`*
+*Your app will run in url `localhost:8000` (The nginx port because it behaves as a proxy for the Django port 8080)*
 
 ## Production Deployment: ##
 
