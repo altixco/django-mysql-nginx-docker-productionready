@@ -77,8 +77,9 @@ The project use docker, so just run:
 
 `docker-compose up`
 
-> If it's first time, the images will be created.
-> Sometimes the project doesn't run at first time because the init of mysql, just run again `docker-compose up` and it will work.
+> If it's first time, the images will be created. Sometimes the project doesn't run at first time because the init of mysql, just run again `docker-compose up` and it will work.
+
+*Your app will run in the port 8000: `localhost:8000`*
 
 ## Production Deployment: ##
 
