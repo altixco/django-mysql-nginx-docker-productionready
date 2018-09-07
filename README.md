@@ -9,12 +9,18 @@ Clone the repository, and update your origin url:
 ```
 git clone https://github.com/altixco/django-mysql-nginx-docker-productionready project_name
 cd project_name
-git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 ```
 
 Rename your project files and directorys:
+```
+make name=project_name init`
+```
 
-`make name=project_name init`
+The command before will remove the `.git` folder so you will have to initialize git:
+```
+git init
+git remote add origin <repository-url>
+```
 
 > Info: Make is required, for mac run `brew install make`
 
