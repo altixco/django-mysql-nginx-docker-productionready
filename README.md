@@ -15,14 +15,13 @@ Rename your project files and directorys:
 ```
 make name=project_name init`
 ```
+> Info: Make is required, for mac run `brew install make`
 
 The command before will remove the `.git` folder so you will have to initialize git:
 ```
 git init
 git remote add origin <repository-url>
 ```
-
-> Info: Make is required, for mac run `brew install make`
 
 ### How to run the project ###
 
