@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: project_name-nginx
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src/static:/static
+      - ./src/media:/media
+      - ./config/nginx-dev:/etc/nginx/conf.d
+    depends_on:
+      - project_name
+
+  project_name:
+    build: .
+    image: grupoaltix/project_name:latest
+    container_name: project_name
+    depends_on:
+      - db
+    volumes:
+      - ./src:/src
+      - ./scripts:/scripts
+    # Dev user: admin pass: admin
+    command: ["/scripts/wait-for-it.sh", "db:3306", "--", "/scripts/command-dev.sh"]
+    expose:
+      - "8080"
+
+  db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: project_name
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
