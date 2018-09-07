@@ -3,6 +3,54 @@ Django 2.1 + Mysql 8 + Nginx + Letsencrypt + Docker (Production Ready)
 
 ## Documentation ##
 
+### Directory Tree ###
+```
+├── Dockerfile
+├── LICENSE
+├── Makefile
+├── README.md
+├── config
+│   ├── nginx
+│   │   └── project_name.conf
+│   ├── nginx-dev
+│   │   └── project_name.conf
+│   └── requirements.txt
+├── docker-compose.yml
+├── docker-production.yml
+├── scripts
+│   ├── command-dev.sh
+│   └── wait-for-it.sh
+└── src
+    ├── __init__.py
+    ├── main
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── fixtures
+    │   │   └── dev.json
+    │   ├── migrations
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    ├── manage.py
+    ├── media
+    │   └── Readme.md
+    ├── project_name
+    │   ├── settings
+    │   │   ├── common.py
+    │   │   ├── development.py
+    │   │   └── production.py
+    │   ├── static
+    │   │   └── Readme.md
+    │   ├── urls.py
+    │   └── wsgi.py
+    ├── static
+    │   └── Readme.md
+    └── templates
+        └── Readme.md
+```
+
 ### How to install the template ###
 
 Clone the repository, and update your origin url: 
