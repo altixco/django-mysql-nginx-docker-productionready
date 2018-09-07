@@ -18,5 +18,9 @@ build/
 tests/report/
 env/
 
-src/media/
-src/static/
+src/media/*
+src/static/*
+
+!src/media/Readme.md
+!src/static/Readme.md
+
