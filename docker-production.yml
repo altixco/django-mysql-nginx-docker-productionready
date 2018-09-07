@@ -48,6 +48,7 @@ services:
     environment:
       MYSQL_USER_FILE: /run/secrets/mysql_user
       MYSQL_PASSWORD_FILE: /run/secrets/mysql_password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
       MYSQL_DATABASE: project_name
     secrets:
       - mysql_user
