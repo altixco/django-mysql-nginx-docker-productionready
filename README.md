@@ -61,7 +61,7 @@ cd project_name
 
 Rename your project files and directorys:
 ```
-make name=project_name init`
+make name=project_name init
 ```
 > Info: Make is required, for mac run `brew install make`
 
