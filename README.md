@@ -1,5 +1,5 @@
 # django-mysql-nginx-docker-productionready
-Django 2.1 + Mysql 8 + Nginx + Letsencrypt + Docker (Production Ready)
+Django 2.2 + Mysql 8 + Nginx + Letsencrypt + Docker (Production Ready)
 
 ## Documentation ##
 
