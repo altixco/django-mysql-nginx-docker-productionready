@@ -2,7 +2,7 @@
 import os
 import sys
 
-if __name__ == '__main__':
+def main():
     if 'PRODUCTION' in os.environ:
         os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project_name.settings.production")
     else:
@@ -16,3 +16,6 @@ if __name__ == '__main__':
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+if __name__ == '__main__':
+    main()
