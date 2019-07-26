@@ -8,7 +8,7 @@ services:
       - "443:443"
     volumes:
       - mediafiles:/media
-      - ./static:/static
+      - staticfiles:/static
       - ./config/nginx:/etc/nginx/conf.d
       - ./config/letsencrypt:/letsencrypt
       # SSL certificates
@@ -39,6 +39,7 @@ services:
       - db
     volumes:
       - mediafiles:/src/media
+      - staticfiles:/src/static
     command: gunicorn project_name.wsgi -b :8080
     networks:
       - webnet

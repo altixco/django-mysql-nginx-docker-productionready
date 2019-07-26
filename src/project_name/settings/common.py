@@ -113,3 +113,12 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Email Config
+EMAIL_SUBJECT_PREFIX = '[project_name] '
+DEFAULT_FROM_EMAIL = 'No Reply <no-reply@project_name.com>'
+SERVER_EMAIL = 'Server <server@project_name.com>'
